@@ -8,7 +8,10 @@ This project provides c# code to control waveshare display.
 ```
 git clone https://github.com/laphir/waveshare.git
 ```
-3. Open `Waveshare.sln` and compile it.
+3. Open `Waveshare.sln` and compile it. Or if you are on a command line, use this command:
+```
+dotnet run --project WaveshareTool\WaveshareTool.csproj
+```
 
 
 How to install .net on Linux:
@@ -17,7 +20,7 @@ How to install .net on Linux:
 ```
 curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --version latest --verbose --dry-run
 ```
-* Then install .net on your device. Default install location is `~/.dotnet`
+* Then install .net on your device. Note that the default install location is `~/.dotnet`
 ```
 curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --version latest --verbose
 ```
@@ -27,6 +30,13 @@ sudo su
 export DOTNET_INSTALL_DIR=/opt/dotnet
 curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --version latest --verbose
 ```
+* Don't forget to add dotnet folder to `$PATH`. Following command assumes install location is `/opt/dotnet`. 
+```
+echo 'export DOTNET_ROOT=/opt/dotnet' >> ~/.bashrc
+echo 'export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools' >> ~/.bashrc
+source ~/.bashrc
+```
+* Then run `dotnet`, check if it works fine.
 
 ## Supported Waveshare devices
 * 2.13bc - Black, White, Red
