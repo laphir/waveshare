@@ -58,3 +58,6 @@ WaveshareTool draw something.png
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## TODO
+Currently working on partial refresh.
